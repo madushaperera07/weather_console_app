@@ -10,19 +10,12 @@ const GeoApi = (location)=>{
             })
         
     
-        }).catch((err)=>{
+        }).catch(()=>{
 
             reject({Error : "Unable to find the location"})
         })
     })
 }
 
-GeoApi("rajagiriya").then((data)=>{
-    console.log(data.city)
-    console.log(data.lat)
-    console.log(data.lon)
-})
-.catch((err)=>{
-    console.log(err.Error)
-})
+module.exports = GeoApi
 
